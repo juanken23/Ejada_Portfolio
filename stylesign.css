@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: black;
+    border-radius: 10px;
+    width: 650px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    color: #ffa31a;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    text-align: left;
+}
+
+.registration-form h2 {
+    text-align: center;
+    color: #ffa31a;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #ffa31a;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(247, 216, 137);
+    border: 3px solid #ffa31a;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+label[for="male"],
+label[for="female"],
+label[for="prefer-not-say"] {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background-color: #ffa31a;
+    color: black;
+    margin-left: 25%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gold;
+}

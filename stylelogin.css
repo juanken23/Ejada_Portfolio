@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ 
+.login-container {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 650px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #ffa31a;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffa31a;
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+}
+ 
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ffa31a;
+}
+ 
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgb(247, 216, 137);
+    border: 3px solid #ffa31a;
+    font-size: 14px;
+}
+ 
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+ 
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+ 
+a {
+    color: #ffa31a;
+    text-decoration: none;
+}
+ 
+a:hover {
+    text-decoration: underline;
+}
+ 
+.btn {
+    padding: 12px;
+    background-color: #ffa31a;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+ 
+.btn:hover {
+    background-color: gold;
+}
+ 
+.google-signin {
+    background-color: #ffa31a;
+    color: #333;
+    border: 1px solid gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.google-signin img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+ 
+.google-signin:hover {
+    background-color: gold;
+}
+ 
+.divider {
+    text-align: center;
+    margin-bottom: 15px;
+    color: gold;
+    font-size: 14px;
+}
+ 
+.signup-link {
+    text-align: center;
+    font-size: 12px;
+    color: gold;
+}
