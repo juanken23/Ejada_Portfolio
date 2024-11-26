@@ -127,8 +127,8 @@ nav ul li a:hover::after{
     margin: 10px 0;
 }
 .tab-contents ul li span{
-    color: blue;
-    font-size: 14px;
+    color: rgb(121, 86, 0);
+    font-size: 25px;
 }
 .tab-contents{
     display: none;
@@ -168,7 +168,7 @@ nav ul li a:hover::after{
 }
 .portfolio-list div a{
     text-decoration: none;
-    color: blue;
+    color: gold;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -178,10 +178,13 @@ nav ul li a:hover::after{
     transform: translateY(-10px);
 }
 /*-----------gallery-------------*/
-#photography{
+#topgallery{
     padding: 30px 0;
     margin-left: 100px;
     margin-right: 100px;
+}
+#topgallery .sub-title{
+    text-align: center;
 }
 .gallery-list{
     display: grid;
@@ -225,6 +228,9 @@ nav ul li a:hover::after{
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
+    font-size: large;
+    color: white;
+    text-shadow: #FC0 1px 0 10px;
 }
 .layer a{
     margin-top: 20px;
@@ -237,6 +243,9 @@ nav ul li a:hover::after{
     height: 60px;
     border-radius: 50%;
     text-align: center;
+}
+.layer p{
+    text-shadow: #FC0 1px 0 10px;
 }
 .gallery:hover img{
     transform: scale(1.1);
@@ -257,65 +266,132 @@ nav ul li a:hover::after{
     background: goldenrod;
 }
 
-
-
-.section{
+/*-----------skills-------------*/
+.skillz h1{
+    text-align: center;
+    font-size: 50px;
+}
+.box{
+    position: relative;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 70px;
+    margin-top: 70px;
+}
+.box .card{
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background: gold;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-.card{
-    height: 500px;
-    margin: 50px;
-    box-shadow: 5px 5px 20px black;
-    overflow: hidden;
+.box .card .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
 }
-.card img{
-    height: 500px;
-    width: 350px;
-    object-fit: cover;
-    border-radius: 5px
-    transition: .5s;
+.box .card .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
 }
-.intro{
-    height: 200px;
-    width: 350px;
-    padding: 6px;
-    box-sizing: border-box;
-    position: absolute;
-    background: rgb(27, 27, 27, .5);
-    color: gold;
-    transition: .5s;
+.box .card .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #191919;
+    transform: translate(5px, 5px);
 }
-.intro h1{
-    margin: 10px;
-    font-size: 40px;
-}
-.intro p{
-    font-size: 20px;
-    margin: 20px;
-    visibility: hidden;
+.box .card .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
     opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
 }
-.intro span{
-    font-weight: bold;
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
 }
-.card:hover{
-    cursor: pointer;
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    /* 360 deg / 300 = 3.6 */
+    animation: animateDot 2s linear forwards;
 }
-.card:hover .intro{
-    height: 220px;
-    bottom: 240px;
-    background: black;
+@keyframes animateDot
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
 }
-.card:hover p{
-    opacity: 1;
-    visibility: visible;
+.dot::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr);
 }
-.card:hover img{
-    transform: scale(1.1) rotate(-3deg);
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
 }
+.number h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.number h2 span{
+    font-weight: 300;
+    color: black;
+    font-size: 0.5em;
+}
+.number p{
+    font-weight: 300;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(116, 83, 0, 0.788);
+}
+
+
 
 /*-----------contact-------------*/
 #contact{
